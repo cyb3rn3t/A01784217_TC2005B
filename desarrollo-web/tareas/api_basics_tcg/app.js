@@ -49,3 +49,17 @@ app.delete('/cards/:id', (req, res) => {
         res.send('card deleted');
     }
 });
+
+// updates cards based on its id, and checks if the card exist before it updates it
+app.put('/cards/:id', (req, res) => {
+    const card = cards.find(card => card.id === parseInt(req.params.id));
+    if (!card) {
+        res.status(404).send('card not found');
+    } else {
+        const { name, type, description } = req.body;
+        if (name) card.name = name;
+        if (type) card.type = type;
+        if (description) card.description = description;
+        res.send('card updated');
+    }
+});
