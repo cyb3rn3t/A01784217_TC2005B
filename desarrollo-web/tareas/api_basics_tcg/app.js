@@ -15,7 +15,7 @@ let cards = []; // stores cards
 
 // returns existing cards (or an error message if none exist)
 app.get('/cards', (req, res) => {
-    if (cartas.length === 0) {
+    if (cards.length === 0) {
         res.status(404).send('you have no cards yet!');
     } else
   res.status(200).send(cards);
@@ -70,3 +70,8 @@ app.put('/cards/:id', (req, res) => {
         res.status(201).send('card updated');
     }
 });
+
+app.listen(port,()=> {
+    console.log(`Running on port ${port}`); // http://localhost:3000/cards ?
+});
+
