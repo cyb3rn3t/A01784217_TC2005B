@@ -14,4 +14,12 @@ app.get('/cards', (req, res) => {
     } else
   res.json(cards);
 });
+// gets a card by its id
+app.get('/cards/:id', (req, res) => {
+    const card = cards.find(card => card.id === parseInt(req.params.id));
+    if (!card) {
+        res.status(404).json('card not found');
+    } else
+  res.json(card);
+});
 
