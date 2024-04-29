@@ -18,7 +18,8 @@ app.get('/cards', (req, res) => {
     if (cartas.length === 0) {
         res.status(404).send('you have no cards yet!');
     } else
-  res.send(cards);
+  res.status(200).send(cards);
+
 });
 
 // gets a card by its id
@@ -27,7 +28,7 @@ app.get('/cards/:id', (req, res) => {
     if (!card) {
         res.status(404).send('card not found');
     } else
-  res.send(card);
+  res.status(200).send(card);
 });
 
 /*receives a json with the new cards that will be added to the list.
@@ -52,7 +53,7 @@ app.delete('/cards/:id', (req, res) => {
         res.status(404).send('card not found');
     } else {
         cards = cards.filter(card => card.id !== parseInt(req.params.id));
-        res.send('card deleted');
+        res.status(200).send('card deleted');
     }
 });
 
@@ -66,6 +67,6 @@ app.put('/cards/:id', (req, res) => {
         if (name) card.name = name;
         if (type) card.type = type;
         if (description) card.description = description;
-        res.send('card updated');
+        res.status(201).send('card updated');
     }
 });
