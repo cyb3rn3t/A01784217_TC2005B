@@ -39,7 +39,6 @@ app.post('/cards', (req, res) => {
     }
 });
 
-
 // deletes a card by its id, and checks if the card exist before it deletes it
 app.delete('/cards/:id', (req, res) => {
     const card = cards.find(card => card.id === parseInt(req.params.id));
