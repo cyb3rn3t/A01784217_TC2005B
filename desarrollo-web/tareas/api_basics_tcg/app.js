@@ -1,3 +1,9 @@
+/* Nicole Dávila Hernández
+A01784217
+29-04-2024
+
+Actividad en clase: API básico para cartas */
+
 "use strict"
 
 import express from 'express';
