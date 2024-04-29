@@ -28,7 +28,7 @@ app.get('/cards/:id', (req, res) => {
 checks that the json has all the necessary attributes or that the card doesn exist yet,
 or it throws a 404 error. if the carrd was added successfully, it also send a success message */
 app.post('/cards', (req, res) => {
-    const { id, name, type, description } = req.body;
+    const { id, name, type, description } = req.body; // confirm attributes with teammates
     if (!id || !name || !type || !description) {
         res.status(404).send('missing attributes');
     } else if (cards.find(card => card.id === id)) {
@@ -36,5 +36,17 @@ app.post('/cards', (req, res) => {
     } else {
         cards.push({ id, name, type, description });
         res.status(201).send('card added successfully');
+    }
+});
+
+
+// deletes a card by its id, and checks if the card exist before it deletes it
+app.delete('/cards/:id', (req, res) => {
+    const card = cards.find(card => card.id === parseInt(req.params.id));
+    if (!card) {
+        res.status(404).send('card not found');
+    } else {
+        cards = cards.filter(card => card.id !== parseInt(req.params.id));
+        res.send('card deleted');
     }
 });
