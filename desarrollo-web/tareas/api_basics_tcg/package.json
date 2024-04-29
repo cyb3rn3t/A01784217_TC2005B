@@ -1,0 +1,11 @@
+{
+  "name": "api_basics_tcg",
+  "version": "1.0.0",
+  "description": "basic api that manages information of cards in a tgc",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nicole Dávila - A01784217",
+  "license": "ISC"
+}
