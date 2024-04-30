@@ -8,7 +8,7 @@ Actividad en clase: API básico para cartas */
 
 import express from 'express';
 
-const port = 3000;
+const port = 5000;
 const app = express();
 
 app.use(express.json());
@@ -21,7 +21,6 @@ app.get('/cards', (req, res) => {
         res.status(404).send('you have no cards yet!');
     } else
   res.status(200).send(cards);
-
 });
 
 // gets a card by its id
@@ -37,16 +36,33 @@ app.get('/cards/:id', (req, res) => {
 checks that the json has all the necessary attributes or that the card doesn exist yet,
 or it throws a 404 error. if the carrd was added successfully, it also send a success message */
 app.post('/cards', (req, res) => {
-    const { id, name, type, description } = req.body; // confirm attributes with teammates
-    if (!id || !name || !type || !description) {
-        res.status(404).send('missing attributes');
-    } else if (cards.find(card => card.id === id)) {
-        res.status(404).send('card already exists');
-    } else {
-        cards.push({ id, name, type, description });
-        res.status(201).send('card added successfully');
+    const newCards = req.body;
+    if (!Array.isArray(newCards)) {
+        return res.status(400).send('request in body must be an array');
     }
+
+    let invalidCards = [];
+    newCards.forEach(card => {
+        if (!validCard(card)) {
+            invalidCards.push(card);
+        } else if (cards.find(c => c.id === card.id)) {
+            invalidCards.push(card);
+        } else {
+            cards.push(card);
+        }
+    });
+
+    if (invalidCards.length > 0) {
+        return res.status(400).json({ message: 'some cards are missing attributes or already exist', invalidCards });
+    }
+
+    res.status(201).send('cards added successfully');
 });
+
+// checks if a card has all the necessary attributes
+function validCard(card) {
+    return card && card.id && card.name && card.type && card.description;
+}
 
 // deletes a card by its id, and checks if the card exist before it deletes it
 app.delete('/cards/:id', (req, res) => {
@@ -74,6 +90,6 @@ app.put('/cards/:id', (req, res) => {
 });
 
 app.listen(port,()=> {
-    console.log(`Running on port ${port}`); // http://localhost:3000/cards ?
+    console.log(`Running on port ${port}`); // http://localhost:5000/cards
 });
 
