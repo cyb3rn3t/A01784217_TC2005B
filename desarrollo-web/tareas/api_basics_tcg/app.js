@@ -61,7 +61,7 @@ app.post('/cards', (req, res) => {
 
 // checks if a card has all the necessary attributes
 function validCard(card) {
-    return card && card.id && card.name && card.type && card.description;
+    return card && card.id && card.name && card.type_id && card.type_name && card.hp && card.speed && card.speed_cost && card.atk && card.def;
 }
 
 // deletes a card by its id, and checks if the card exist before it deletes it
@@ -81,10 +81,15 @@ app.put('/cards/:id', (req, res) => {
     if (!card) {
         res.status(404).send('card not found');
     } else {
-        const { name, type, description } = req.body;
+        const { name, type_id, type_name, hp, speed, speed_cost, atk, def } = req.body;
         if (name) card.name = name;
-        if (type) card.type = type;
-        if (description) card.description = description;
+        if (type_id) card.type_id = type_id;
+        if (type_name) card.type_name = type_name;
+        if (hp) card.hp = hp;
+        if (speed) card.speed = speed;
+        if (speed_cost) card.speed_cost = speed_cost;
+        if (atk) card.atk = atk;
+        if (def) card.def = def;
         res.status(201).send('card updated');
     }
 });
