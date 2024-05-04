@@ -13,36 +13,21 @@ using TMPro;
 
 public class levelText : MonoBehaviour
 {
-    Text textComponent;
     TextMeshProUGUI textMeshProComponent;
 
     void Start()
     {
-        // Try to get the Text component first
-        textComponent = GetComponent<Text>();
-
-        // If Text component is null, try to get the TextMeshPro component
-        if (textComponent == null)
+        // Try to get the TextMeshPro component
+        textMeshProComponent = GetComponent<TextMeshProUGUI>();
+        if (textMeshProComponent == null)
         {
-            textMeshProComponent = GetComponent<TextMeshProUGUI>();
+            Debug.LogError("No TextMeshPro component found on GameObject.");
         }
     }
 
     public void UpdateText(int level, bool gameOver)
     {
-        // Check if either textComponent or textMeshProComponent is available
-        if (textComponent != null)
-        {
-            if (gameOver)
-            {
-                textComponent.text = "Game Over";
-            }
-            else
-            {
-                textComponent.text = "Level: " + level;
-            }
-        }
-        else if (textMeshProComponent != null)
+        if (textMeshProComponent != null)
         {
             if (gameOver)
             {
@@ -52,10 +37,6 @@ public class levelText : MonoBehaviour
             {
                 textMeshProComponent.text = "Level: " + level;
             }
-        }
-        else
-        {
-            Debug.LogError("No Text or TextMeshPro component found on GameObject.");
         }
     }
 }

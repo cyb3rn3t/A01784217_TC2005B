@@ -176,7 +176,7 @@ MonoBehaviour:
   buttonParent: {fileID: 1719673110}
   numButtons: 5
   counter: 0
-  levelTextComponent: {fileID: 0}
+  levelTextComponent: {fileID: 757275006}
   gameOverText: {fileID: 386010358}
 --- !u!1 &386010356
 GameObject:

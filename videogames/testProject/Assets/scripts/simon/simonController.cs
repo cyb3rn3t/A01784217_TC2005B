@@ -70,7 +70,7 @@ public class simonController : MonoBehaviour
                     // Finish the player turn to ensure no other actions are
                     // taken into account
                     playerTurn = false;
-                    level++;
+                    incrementLevel(); // was level++
                     counter = 0;
                     AddToSequence();
                 }
@@ -82,6 +82,12 @@ public class simonController : MonoBehaviour
                 Debug.Log("Game Over!");
             }
         }
+    }
+
+    void incrementLevel()
+    {
+        level++;
+        levelTextComponent.UpdateText(level, gameIsOver);
     }
 
     // Add another number to the sequence and display it
