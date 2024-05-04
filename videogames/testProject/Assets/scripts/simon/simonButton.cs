@@ -14,14 +14,19 @@ public class simonButton : MonoBehaviour
     [SerializeField] float delay;
     Color originalColor;
 
+    AudioSource audioSource;
+
     // Start is called before the first frame update
-    void Start()
+    public void Init(int index)
     {
         originalColor = GetComponent<Image>().color;
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = Resources.Load<AudioClip>($"Audio/{index}");
     }
 
     public void Highlight()
     {
+        audioSource.Play();
         StartCoroutine(ChangeColor());
     }
     IEnumerator ChangeColor()
