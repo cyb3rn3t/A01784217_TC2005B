@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 20447679}
   - component: {fileID: 20447678}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: welcomeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -157,8 +157,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -70}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -0.000015259, y: -69}
+  m_SizeDelta: {x: 346.5894, y: 84.865}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &20447678
 MonoBehaviour:
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: choose a game
+  m_text: "welcome! \nchoose a game:"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -215,7 +215,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -266,24 +266,72 @@ PrefabInstance:
     m_TransformParent: {fileID: 708312417}
     m_Modifications:
     - target: {fileID: 2791795479066787896, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
+      propertyPath: m_Colors.m_NormalColor.b
+      value: 0.45882356
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791795479066787896, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
+      propertyPath: m_Colors.m_NormalColor.g
+      value: 0.88629216
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791795479066787896, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
+      propertyPath: m_Colors.m_NormalColor.r
+      value: 0.9607843
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791795479066787896, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791795479066787896, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.7872153
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791795479066787896, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.8113208
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791795479066787896, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791795479066787896, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2791795479066787896, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1826628481}
+      objectReference: {fileID: 1249471523}
+    - target: {fileID: 2791795479066787896, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2791795479066787896, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GoTo
+      value: OpenVideo
       objectReference: {fileID: 0}
     - target: {fileID: 2791795479066787896, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SceneChanger, Assembly-CSharp
+      value: OpenYouTubeVideo, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791795479066787896, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3770374867141871580, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
       propertyPath: m_text
-      value: this does nothign
+      value: press for a surprise...
+      objectReference: {fileID: 0}
+    - target: {fileID: 3770374867141871580, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
+      propertyPath: m_fontSize
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 3770374867141871580, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
+      propertyPath: m_fontStyle
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3770374867141871580, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 4932693700734012453, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
       propertyPath: m_Pivot.x
@@ -311,11 +359,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4932693700734012453, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 160
+      value: 230
       objectReference: {fileID: 0}
     - target: {fileID: 4932693700734012453, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 30
+      value: 34.3299
       objectReference: {fileID: 0}
     - target: {fileID: 4932693700734012453, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
       propertyPath: m_LocalPosition.x
@@ -367,12 +415,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5029118668247700137, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
       propertyPath: m_Name
-      value: Button (2)
+      value: placeholderButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 8029053154819715184, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
+      propertyPath: m_Name
+      value: placeholderButtonText
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5029118668247700137, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1249471523}
   m_SourcePrefab: {fileID: 100100000, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
 --- !u!1 &708312416
 GameObject:
@@ -509,7 +564,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3770374867141871580, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
       propertyPath: m_text
-      value: simong
+      value: simon
+      objectReference: {fileID: 0}
+    - target: {fileID: 3770374867141871580, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4932693700734012453, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
       propertyPath: m_Pivot.x
@@ -593,7 +652,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5029118668247700137, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
       propertyPath: m_Name
-      value: Button (1)
+      value: simonSelection
+      objectReference: {fileID: 0}
+    - target: {fileID: 8029053154819715184, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
+      propertyPath: m_Name
+      value: simonSelectionText
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -878,6 +941,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1249471519 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5029118668247700137, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
+  m_PrefabInstance: {fileID: 259577859}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1249471523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249471519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d72129f4bacc8d47b7dd24d647568bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  youtubeVideoLink: https://www.youtube.com/watch?v=dQw4w9WgXcQ
 --- !u!1 &1826628480
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,6 +1012,30 @@ PrefabInstance:
     m_TransformParent: {fileID: 708312417}
     m_Modifications:
     - target: {fileID: 2791795479066787896, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
+      propertyPath: m_Colors.m_NormalColor.b
+      value: 0.45882356
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791795479066787896, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
+      propertyPath: m_Colors.m_NormalColor.g
+      value: 0.9607843
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791795479066787896, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
+      propertyPath: m_Colors.m_NormalColor.r
+      value: 0.47902942
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791795479066787896, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.070588246
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791795479066787896, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.9764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791795479066787896, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.15581557
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791795479066787896, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 5
       objectReference: {fileID: 0}
@@ -952,7 +1057,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3770374867141871580, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
       propertyPath: m_text
-      value: pomg
+      value: pong
+      objectReference: {fileID: 0}
+    - target: {fileID: 3770374867141871580, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4932693700734012453, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
       propertyPath: m_Pivot.x
@@ -1036,7 +1145,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5029118668247700137, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
       propertyPath: m_Name
-      value: Button
+      value: pongSelection
+      objectReference: {fileID: 0}
+    - target: {fileID: 8029053154819715184, guid: 2316cebb77cf0684ab43a2eb03f7f085, type: 3}
+      propertyPath: m_Name
+      value: pongSelectionText
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

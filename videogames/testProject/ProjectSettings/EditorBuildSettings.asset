@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/pong.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/simon.unity
+    guid: 77f51630588a97a45bdaa6dcad3aab93
   m_configObjects: {}
