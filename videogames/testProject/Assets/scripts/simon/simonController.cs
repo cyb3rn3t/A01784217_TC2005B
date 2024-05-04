@@ -11,58 +11,43 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SimonController : MonoBehaviour
+
+public class simonController : MonoBehaviour
 {
     [SerializeField] List<simonButton> buttons;
     [SerializeField] List<int> sequence;
     [SerializeField] float delay;
-    [SerializeField] int level;
     [SerializeField] bool playerTurn = false;
+    [SerializeField] GameObject buttonPrefab;
+    [SerializeField] Transform buttonParent;
+    [SerializeField] int numButtons;
 
     [SerializeField] int counter = 0;
 
-    [SerializeField] int numButtons;
-    [SerializeField] GameObject buttonPrefab;
-    [SerializeField] Transform buttonParent;
 
     // Start is called before the first frame update
     void Start()
     {
         // Configure the buttons to be used in the game
+        //update
         PrepareButtons();
     }
 
     // Configure the callback functions for the buttons
-
-    //void PrepareButtons()
-    //{
-    //    for (int i = 0; i < numButtons; i++)
-    //    {
-    //        // Creates the copies of the button as children of the Panel
-    //        GameObject newButton = Instantiate(buttonPrefab, buttonParent);
-    //        newButton.GetComponent<Image>().color = Color.HSVToRGB((float)i / numButtons, 1, 1);
-    //        // set the default color for each button
-    //        newButton.GetComponent<simonButton>().Init(i);
-    //        buttons.Add(newButton.GetComponent<simonButton>());
-    //        buttons[i].gameObject.GetComponent<Button>().onClick.AddListener(() => ButtonPressed(i));
-    //    }
-    //    // Start the game by adding the first button
-    //    AddToSequence();
-    //}
-
-    // old function
     void PrepareButtons()
     {
-        for (int i = 0; i < buttons.Count; i++)
+        for (int i = 0; i < numButtons; i++)
         {
             int index = i;
-            // Creates the copies of the button as children of the Panel
             GameObject newButton = Instantiate(buttonPrefab, buttonParent);
-            newButton.GetComponent<Image>().color = Color.HSVToRGB((float)i / numButtons, 1, 1);
-            // set the default color for each button
-            newButton.GetComponent<simonButton>().Init(i);
+
+
             buttons.Add(newButton.GetComponent<simonButton>());
-            buttons[i].gameObject.GetComponent<Button>().onClick.AddListener(() => ButtonPressed(i));
+            buttons[i].gameObject.GetComponent<Button>().onClick.AddListener(() => ButtonPressed(index));
+
+            newButton.GetComponent<Image>().color = Color.HSVToRGB((float)index / numButtons, 1, 1);
+            newButton.GetComponent<simonButton>().Init(index);
+
         }
         // Start the game by adding the first button
         AddToSequence();
@@ -76,7 +61,7 @@ public class SimonController : MonoBehaviour
         {
             if (index == sequence[counter++])
             {
-                // Highlight the button selected by the player
+                // highlight the button selected by the player
                 buttons[index].Highlight();
                 if (counter == sequence.Count)
                 {
@@ -104,7 +89,6 @@ public class SimonController : MonoBehaviour
     }
 
     // Display every button in the sequence so far
-
     IEnumerator PlaySequence()
     {
         // Add an initial delay before showing the sequence
@@ -117,5 +101,4 @@ public class SimonController : MonoBehaviour
         // Switch the turn over to the player
         playerTurn = true;
     }
-
 }
