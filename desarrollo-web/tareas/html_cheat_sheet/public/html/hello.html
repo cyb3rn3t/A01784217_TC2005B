@@ -5,9 +5,9 @@
         <style>
             hr {
                 border: none;
-                height: 3px;
-                color: #333; 
-                background-color: #333;
+                border-top: 3px dotted #737373;
+                width: 90%;
+                margin: 0 auto; 
             }
         </style>
     </head>
@@ -20,13 +20,13 @@
             <p> anchor tags are used to create a hyperlink on a website, either to an external page or to a page within the server its running on (like this one!) </p>
             <p> <a href="https://www.google.com">this is a hyperlink to google, for example</a> </p>
         </div>
-<hr>
+        <hr>
         <div>
             <h3>&lt;p&gt; - paragraphs</h3>
             <p> paragraph tags are used to create paragraphs on a website. </p>
             <p> just like this one. </p>
         </div>
-<br>
+        <hr>
         <div>
             <h3>&lt;h1&gt; to &lt;h6&gt; - headings</h3>
             <p> heading tags are used to create headings on a website. </p>
@@ -37,7 +37,7 @@
             <p> <h5>h5 - this is almost the smallest heading</h5> </p>
             <p> <h6>h6 - this is the smallest heading</h6> </p>
         </div>
-<br>
+        <hr>
         <div>
             <h3>&lt;h1&gt; - divisions</h3>
             <p> division tags are used to divide the content of a website into sections. </p>
@@ -45,13 +45,13 @@
             <p> you can't really see them, but they're there! and they provide organization and strucutre for the webpage. </p>
             <p> they're also useful when it comes to applying styles with css and functionality with javascript. </p>
         </div>
-<br>
+        <hr>
         <div>
             <h3>&lt;span style="{styles}"&gt; &lt;/span&gt; - spans</h3>
             <p> span tags are used to apply styles to a specific part of a text. </p>
             <p> <span style="color: #7fd918;">for example, this text is green.</span> </p>
         </div>
-<br>
+        <hr>
         <div>
             <h3>&lt;strong&gt; - strong emphasis</h3>
             <p> the strong tag is used to, semantically, give strong emphasis to text. </p>
@@ -59,45 +59,45 @@
             <p> when a text in between a strong tag, it will be spoken in a lower tone when read by these apps, although it visually looks very similar to using regular bold text. </p>
             <p> <strong>this is an example of text that is strongly emphasized.</strong> </p>
         </div>
-<br>
+        <hr>
         <div>
             <h3>&lt;i&gt; - italicized text</h3>
             <p> The i tag is used to italicize text </p>
             <p> <i>you can use for dramatic effect, like this!</i> </p>
         </div>
-<br>
+        <hr>
         <div>
             <h3>&lt;u&gt; - underlined text</h3>
             <p> the u tag is used to underline text. </p>
             <p> <u>this text is underlined, as you can see.</u> </p>
         </div>
-<br>
+        <hr>
         <div>
             <h3>&lt;b&gt; - bold text</h3>
             <p> the b tag is used to make text bold. </p>
             <p> unlike the strong tag, the b tag only makes the text bold visually and does not provide any semantic value to the website. </p>
             <p> <b>just like this!</b> </p>
         </div>
-<br>
+        <hr>
         <div>
             <h3>&lt;strike&gt; - strikethrough text</h3>
             <p> the strike tag is used to strikethrough text </p>
             <p> <strike>this text has been strikethrough'd.</strike> </p>
         </div>
-<br>
+        <hr>
         <div>
             <h3>&lt;small&gt; - small text</h3>
             <p> The small tag is used to make text smaller. </p>
             <p> <small>like this text that is teeny tiny.</small> </p>
         </div>
-<br>
+        <hr>
         <div>
             <h3>&lt;em&gt; - emphasized text</h3>
             <p> the em tag is used to emphasize text. visually, it looks like simply an italicized text, but it works similarly to the strong tag. </p>
             <p> it will give a special emphasis to text when read by text-to-speech apps, and, visually, it looks like an i tag was used.</p>
             <p> <em>this is an emphasized text, for example.</em> </p>
         </div>
-<br>
+        <hr>
         <div>
             <h3>&lt;header&gt; - header section</h3>
             <p> the header tag is used to define a header section of a document or a section. </p>
@@ -105,7 +105,7 @@
                 <h1>look at this header section!!</h1>
             </header>
         </div>
-<br>
+        <hr>
         <div>
             <h3>&lt;section&gt; - section</h3>
             <p> the section tag is used to define a section in a document </p>
@@ -114,7 +114,7 @@
                 <p>this is the content of the section.</p>
             </section>
         </div>
-<br>
+        <hr>
         <div>
             <h3>&lt;article&gt; - article</h3>
             <p> the article tag is used to define an independent, self-contained piece of content. </p>
@@ -123,7 +123,7 @@
                 <p>and this is the content of the article.</p>
             </article>
         </div>
-<br>
+        <hr>
         <div>
             <h3>&lt;aside&gt; - aside</h3>
             <p> the aside tag is used to define content that is tangentially related to the main content </p>
@@ -131,8 +131,7 @@
                 <h3>this is an aside, for example.</h3>
                 <p>this is the content of the aside.</p>
             </aside>
-        </div>
-<br>
+            <hr>
         <div>
             <h3>&lt;footer&gt; - footer section</h3>
             <p> the footer tag is used to define a footer section of a document or a section </p>
@@ -140,17 +139,18 @@
                 <p>this is a footer section WOO</p>
             </footer>
         </div>
-<br>
+        <hr>
         <div>
             <h3>&lt;nav&gt; - navigation section</h3>
             <p> the nav tag is used to define a section of navigation links </p>
             <nav>
-                <a href="http://localhost:3000/pagina2">check out page 2 of this website!</a> |
-                <a href="https://www.youtube.com/watch?v=mpYdDJd-mSY">or click this link that takes you to a totally normal youtube video!</a> |
+                <a href="http://localhost:3000/pagina2">check out page 2 of this website!</a> <br>
+                <a href="https://www.youtube.com/watch?v=mpYdDJd-mSY">or click this link that takes you to a totally normal youtube video!</a> <br>
                 <a href="https://github.com/cyb3rn3t">or check out my github while you're here :)</a>
+                <br><br>
             </nav>
         </div>
-<br>
+        <hr>
         <div>
             <h3>&lt;img src="{image link}"&gt; - images</h3>
             <p> image tags are used to display images on a website </p>
@@ -158,22 +158,21 @@
             <p> <img src="images/cat_on_puter.jpg" alt="me on the puter" width="300"> </p>
             <p> it's worth mentioning that image tags do not require a closing tag.</p>
         </div>
-<br>
+        <hr>
         <div>
             <h3>&lt;br&gt; - line break</h3>
             <p> the br tag is used to insert a line break. </p>
             <p> This is the first line <br> and this is the second line after a break! </p>
             <p> like image tags, breaks don't need a closing tag. </p>
         </div>
-<br>
+        <hr>
         <div>
             <h3>&lt;hr&gt; - horizontal rule</h3>
             <p> the hr tag is used to insert a horizontal rule. </p>
             <p> they also don't need a closing tag! </p>
             <hr>
             <p> this is some content after the horizontal rule. </p>
-        </div>
-<br>
+            <hr>
         <div>
             <h3>&lt;form&gt; - form</h3>
             <p> the form tag is used to create an HTML form for user input </p>
@@ -198,7 +197,7 @@
             <p> &lt;/form&gt; </p> 
             
         </div>
-<br>
+        <hr>
         <div>
             <h3>&lt;table&gt; - table</h3>
             <p> the table tag is used to create an HTML table </p>
@@ -213,7 +212,7 @@
                 </tr>
             </table>
         </div>
-<br>
+        <hr>
         <div>
             <h3>&lt;ul&gt; - unordered list</h3>
             <p> the ul tag is used to create an unordered list </p>
@@ -223,7 +222,7 @@
                 <li>item 3</li>
             </ul>
         </div>
-<br>
+        <hr>
         <div>
             <h3>&lt;ol&gt; - ordered list</h3>
             <p> the ol tag is used to create an ordered list </p>
@@ -233,6 +232,6 @@
                 <li>item 3</li>
             </ol>
         </div>
-<br>
+        <hr>
     </body>
 </html>
