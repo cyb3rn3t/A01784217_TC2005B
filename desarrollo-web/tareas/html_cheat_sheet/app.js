@@ -16,9 +16,9 @@ app.get("/pagina2", (req, res) => {
 });
 
 app.use((req, res) => {
-    res.status(404).send('Sorry, we cannot find that!');
+    res.status(404).send('boo, we cannot find that!');
 });
 
 app.listen(3000, () => {
-    console.log("Server is running on port 3000");
+    console.log("server is running on port 3000");
 });
