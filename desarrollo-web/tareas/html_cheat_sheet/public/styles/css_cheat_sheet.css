@@ -1,0 +1,147 @@
+@font-face {
+    font-family: 'Minecraftia';
+    src: url('../fonts/Minecraftia-Regular.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Minecraftia', sans-serif;
+}
+
+.border-example {
+    border: 5px solid rgb(210, 65, 128);
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+}
+
+.border-sides-example {
+    border-left: 5px solid blue;
+    border-right: 5px solid green;
+    border-top: 5px solid red;
+    border-bottom: 5px solid purple;
+    padding: 10px;
+}
+
+.border-radius-example {
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+/* .background-image-example {
+    background-image: url('../images/bg_image.jpeg');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    width: 50%; 
+    height: 200px; 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    color: black; 
+    text-align: center;
+    margin: 0 auto; 
+    position: relative;
+} */
+
+.background-image-example {
+    background-image: url('../images/bg_image.jpeg');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    width: 375px; 
+    height: 125px; 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    color: black; 
+    text-align: center;
+    margin: 0 auto; 
+    position: relative;
+}
+
+.color-example {
+    color: #FF5733;
+}
+
+.font-example {
+    font: italic small-caps bold 16px/2 cursive;
+}
+
+.font-family-example {
+    font-family: Arial, sans-serif;
+}
+
+.font-style-weight-example {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.width-height-example {
+    width: 150px;
+    height: 110px;
+    background-color: lightgrey;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    line-height: 20px;
+}
+
+.list-style-example {
+    list-style-type:square;
+    list-style-position: inside;
+}
+
+.margin-example {
+    margin: 20px;
+    border: 1px solid black;
+}
+
+.padding-example {
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.overflow-example {
+    width: 500px;
+    height: 150px;
+    border: 1px solid black;
+    overflow: scroll;
+    white-space: nowrap;
+}
+
+.display-example {
+    display: block;
+    width: 150px;
+    height: 110px;
+    background-color: yellow;
+    line-height: 55px;
+    padding: 5px;
+}
+
+.position-example {
+    position: relative;
+    top: 20px;
+    left: 30px;
+    width: 300px;
+    height: 50px;
+    background-color: lightblue;
+    line-height: 55px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.filter-example {
+    filter:saturate(250%);
+    width: 200px;
+    height: auto;
+    border: 1px solid black;
+}
+
+#centered-link {
+    text-align: center;
+}

@@ -1,30 +1,160 @@
 <html lang="en">
 <head>
-    <title> welcome, you made it! </title>
-    <link rel="stylesheet" href="../styles/styles.css">
+    <title> css cheat sheet </title>
+    <link rel="stylesheet" href="../styles/css_cheat_sheet.css">
     <style>
-        .video{
-            margin-left: auto;
-            margin-right: auto;
-            display: block;}
-        .p{
-            display: block;
-            text-align: center;
-        }
+        hr {
+            border: none;
+            border-top: 3px dotted #737373;
+            width: 90%;
+            margin: 0 auto; 
+            }
     </style>
 </head>
     <body>
-        <h1>welcome to the second page!</h1>
-        <p> congratulations! you made it. </p>
-        <p> uh, have this video as a reward. </p>
-        <iframe class="video" width="560"
-        height="315"
-        src="https://www.youtube.com/embed/mpYdDJd-mSY?si=Lgwx_DFSUfPl4nsV"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" 
-        allowfullscreen></iframe>
-          <br><br>
-        <a href="http://localhost:3000/" class="p">if you're done (which you hopefully will be before the video ends), you can go back to page 1</a>
+        <h1>css cheat sheet</h1>
+        <h2>css properties</h2>
+
+        <div>
+            <h3>border</h3>
+            <p> the border property is what makes up the border of an element.</p>
+            <p> this property can have values set for its width (border-width), style (border-style), and color (border-color). </p>
+            <p> for example: </p>
+            <p class="border-example"> this is some text with a border around it</p>
+        </div>
+        <hr>
+        <div>
+            <h3>border-left, border-right, border-top, border-bottom</h3>
+            <p>these properties allow you to specify different border styles on each side of an element.</p>
+            <p>for example:</p>
+            <p class="border-sides-example">this has different borders on each side.</p>
+        </div>
+        <hr>
+        <div>
+            <h3>border-radius</h3>
+            <p>the border-radius property is used to round the corners of an element's outer border edge.</p>
+            <p>for example:</p>
+            <p class="border-radius-example">this has rounded corners, how cute!</p>
+        </div>
+        <hr>
+        <div>
+            <h3>background-image</h3>
+            <p>the background-image property sets an image as the background of an element.</p>
+            <p>for example:</p>
+            <p class="background-image-example">this has a background image.</p>
+            <br>
+        </div>
+        <hr>
+        <div>
+            <h3>color</h3>
+            <p>the color property sets the color of the text content of an element.</p>
+            <p>for example:</p>
+            <p class="color-example">this text is colored red :D</p>
+        </div>
+        <hr>
+        <div>
+            <h3>font</h3>
+            <p>the font property is a shorthand for setting font-style, font-variant, font-weight, font-size, line-height, and font-family.</p>
+            <p>for example:</p>
+            <p class="font-example">This text has a custom font.</p>
+        </div>
+        <hr>
+        <div>
+            <h3>font-family</h3>
+            <p>the font-family property specifies the font and different variations of it for an element.</p>
+            <p>for example:</p>
+            <p class="font-family-example">this text has a different font family.</p>
+        </div>
+        <hr>
+        <div>
+            <h3>font-style, font-weight</h3>
+            <p>the font-style property allows you to make text italic, and the font-weight property sets the weight (or boldness) of the font.</p>
+            <p>for example:</p>
+            <p class="font-style-weight-example">this text is italic and bold.</p>
+        </div>
+        <hr>
+        <div>
+            <h3>width, height</h3>
+            <p>the width and height properties set the width and height of an element.</p>
+            <p>for example:</p>
+            <div class="width-height-example">this has specific width and height.</div>
+            <br>
+        </div>
+        <hr>
+        <div>
+            <h3>list-style</h3>
+            <p>the list-style property is a shorthand for list-style-type, list-style-position, and list-style-image.</p>
+            <p>for example:</p>
+        <ul class="list-style-example">
+            <li>custom bullet point</li>
+            <li>another cool and custom bullet point</li>
+        </ul>
+        </div>
+        <hr>
+        <div>
+            <h3>margin</h3>
+            <p>the margin property sets the outer space of an element.</p>
+            <p>for example:</p>
+        <div class="margin-example">this has margins around it.</div>
+        </div>
+        <hr>
+        <div>
+            <h3>padding</h3>
+            <p>the padding property sets the inner space of an element.</p>
+            <p>for example:</p>
+        <div class="padding-example">this has padding inside it.</div>
+        <br>
+        </div>
+        <hr>
+        <div>
+            <h3>overflow</h3>
+            <p>the overflow property specifies what happens if content overflows an element's box.</p>
+            <p>for example:</p>
+        <div class="overflow-example">this has overflow set to scroll.
+            <br>
+            i mean, just look at all this next that needs scrolling
+            <br>
+            my god, it just keeps going.
+            <br>
+            help.
+            <br>
+            please.
+            <br>
+            i'm begging you.
+            <br>
+            i can't take it anymore.
+            <br>
+            make it stop.
+            <br>
+            AAAAAAA
+        </div>
+        </div>
+        <br>
+        <hr>
+        <div>
+            <h3>display</h3>
+            <p>the display property specifies the display behavior of an element.</p>
+            <p>for example:</p>
+        <div class="display-example">this is a block element.</div>
+        </div>
+        <br>
+        <hr>
+        <div>
+            <h3>position</h3>
+            <p>the position property specifies the type of positioning method used for an element (static, relative, absolute, fixed, or sticky).</p>
+            <p>for example:</p>
+        <div class="position-example">this is a positioned element.</div>
+        </div>
+        <br>
+        <hr>
+        <div>
+            <h3>filter</h3>
+            <p>the filter property applies graphical effects like blur or color shift to an element.</p>
+            <p>tor example, look at this oversaturated image of leon kennedy juding you:</p>
+        <img src="../images/filter_image.jpg" class="filter-example" alt="Filtered example image">
+        </div>
+        <br>
+        <hr>
+          <br>
+        <div id="centered-link"><a href="/"> that's it!<br>if you're doneyou can go back to the html cheat sheet! </a></div>
 </html>
