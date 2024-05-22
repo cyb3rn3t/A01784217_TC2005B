@@ -6,12 +6,12 @@ app.use(express.json());
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-    const data = fs.readFileSync(__dirname + "/public/html/hello.html");
+    const data = fs.readFileSync(__dirname + "/public/html/html_cheat_sheet.html");
     res.send(data.toString());
 });
 
-app.get("/pagina2", (req, res) => {
-    const data = fs.readFileSync(__dirname + "/public/html/pagina2.html");
+app.get("/css_cheat_sheet", (req, res) => {
+    const data = fs.readFileSync(__dirname + "/public/html/css_cheat_sheet.html");
     res.send(data.toString());
 });
 
