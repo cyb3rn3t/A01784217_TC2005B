@@ -1,5 +1,8 @@
 body {
     font-family: Arial, sans-serif;
+    margin: 0; 
+    padding: 0;
+    background-color: #25404B; 
 }
 
 header {
@@ -10,22 +13,33 @@ header {
     padding: 0px 100px;
 }
 
-.p {
+header nav p {
     color: white;
     font-weight: bold;
 }
 
+header nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+    font-size: 10px;
+}
+
 #main {
-    padding: 20px 100px;
+    padding: 20px 0; 
     background-color: #B97D2D;
     color: white;
     text-align: center;
+    margin: 0;
+    box-sizing: border-box; 
 }
 
 .main-text {
     font-size: 13px;
-    padding: 0px 80px;
+    padding: 20px 100px;
     text-align: left;
+    margin: 0; 
+    box-sizing: border-box; 
 }
 
 #newsletter {
@@ -35,7 +49,10 @@ header {
     align-items: center;
     background-color: #25404B;
     padding: 10px 100px;
-
+    margin: 0; 
+    box-sizing: border-box; 
+    font-weight: bold;
+    font-size: 12px;
 }
 
 #footer {
@@ -44,20 +61,29 @@ header {
     padding: 10px 20px;
     text-align: center;
     font-size: 11px;
+    margin: 0; 
+    box-sizing: border-box; 
 }
+
+input{
+    font-size: 9px;
+}
+
 .nav {
     list-style-type: none;
     padding: 0;
     overflow: hidden;
     background-color: #333;
-}
-
-.subscribe {
-    margin-top: 20px;
+    margin: 0; 
 }
 
 img {
-    width: 70px;
+    width: 60px;
+    height: auto;
+}
+
+.html-img {
+    width: 80px;
     height: auto;
 }
 
@@ -68,4 +94,26 @@ img {
     justify-content: space-evenly;
     align-items: center;
     padding: 20px 100px;
+    margin: 0; 
+    color: black;
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #B97D2D;
+    color: white;
+    margin: 10px 0;
+    border: none;
+    font-size: 10px;
+    padding: 1px 5px;
+    align-content: center;
+
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
