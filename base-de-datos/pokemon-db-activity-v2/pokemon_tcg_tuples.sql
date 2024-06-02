@@ -65,22 +65,22 @@ INSERT INTO Deck (deck_name, player_id) VALUES
 ('Palkia Spatial', 1);
 
 -- Inserting Matches
-INSERT INTO Pokemon_Match (match_date, match_outcome, player1_id, player2_id) VALUES
-('2024-06-01', 'Win', 1, 2),
-('2024-06-02', 'Loss', 3, 1),
-('2024-06-03', 'Draw', 2, 3),
-('2024-06-04', 'Win', 4, 5),
-('2024-06-05', 'Loss', 5, 6),
-('2024-06-06', 'Win', 7, 8),
-('2024-06-07', 'Draw', 8, 9),
-('2024-06-08', 'Loss', 10, 11),
-('2024-06-09', 'Win', 12, 13),
-('2024-06-10', 'Loss', 14, 15),
-('2024-06-11', 'Win', 6, 7),
-('2024-06-12', 'Draw', 9, 10),
-('2024-06-13', 'Loss', 11, 12),
-('2024-06-14', 'Win', 13, 14),
-('2024-06-15', 'Draw', 15, 1);
+INSERT INTO Pokemon_Match (match_date, match_outcome, player1_id, player2_id, tournament_id) VALUES
+('2024-06-01', 'Win', 1, 2, 1),
+('2024-06-02', 'Loss', 3, 1, 1),
+('2024-06-03', 'Draw', 2, 3, 1),
+('2024-06-04', 'Win', 4, 5, 2),
+('2024-06-05', 'Loss', 5, 6, 2),
+('2024-06-06', 'Win', 7, 8, 3),
+('2024-06-07', 'Draw', 8, 9, 3),
+('2024-06-08', 'Loss', 10, 11, 4),
+('2024-06-09', 'Win', 12, 13, 4),
+('2024-06-10', 'Loss', 14, 15, 5),
+('2024-06-11', 'Win', 6, 7, 5),
+('2024-06-12', 'Draw', 9, 10, 6),
+('2024-06-13', 'Loss', 11, 12, 6),
+('2024-06-14', 'Win', 13, 14, 7),
+('2024-06-15', 'Draw', 15, 1, 7);
 
 -- Inserting Tournaments
 INSERT INTO Tournament (tournament_name, tournament_date) VALUES
@@ -101,7 +101,6 @@ INSERT INTO Tournament (tournament_name, tournament_date) VALUES
 ('Ferrum Fights', '2025-09-01');
 
 -- Inserting TrainerCards
--- Only inserting a few of these since not all tuples in my Card table are Trainer type cards
 INSERT INTO Trainer_Card (card_id, card_effect, usage_limit) VALUES
 (4, 'Shuffle your hand into your deck. Then, draw 7 cards.', 1),
 (8, 'Search your deck for up to 2 Basic Pokémon and put them onto your Bench. Then, shuffle your deck.', 1);
@@ -177,3 +176,51 @@ INSERT INTO Card_Attack (card_id, attack_id) VALUES
 (11, 13), 
 (12, 14), 
 (13, 15); 
+
+-- Inserting Tournament_Player data
+INSERT INTO Tournament_Player (tournament_id, player_id) VALUES
+(1, 1),
+(1, 2),
+(1, 3),
+(2, 4),
+(2, 5),
+(2, 6),
+(3, 7),
+(3, 8),
+(3, 9),
+(4, 10),
+(4, 11),
+(4, 12),
+(5, 13),
+(5, 14),
+(5, 15),
+(6, 1),
+(6, 4),
+(6, 7),
+(7, 10),
+(7, 11),
+(7, 13),
+(8, 2),
+(8, 5),
+(8, 8),
+(9, 3),
+(9, 6),
+(9, 9),
+(10, 12),
+(10, 14),
+(10, 15),
+(11, 1),
+(11, 5),
+(11, 10),
+(12, 7),
+(12, 8),
+(12, 13),
+(13, 4),
+(13, 6),
+(13, 11),
+(14, 9),
+(14, 12),
+(14, 14),
+(15, 2),
+(15, 3),
+(15, 15);

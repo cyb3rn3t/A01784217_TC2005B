@@ -1,7 +1,3 @@
-DROP SCHEMA IF EXISTS pokemon_tcg;
-CREATE SCHEMA pokemon_tcg;
-USE pokemon_tcg;
-
 -- Player Table
 CREATE TABLE Player (
     player_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -38,8 +34,10 @@ CREATE TABLE Pokemon_Match (
     match_outcome ENUM('Win', 'Loss', 'Draw') NOT NULL,
     player1_id INT,
     player2_id INT,
+    tournament_id INT, -- Foreign key to connect to Tournament
     FOREIGN KEY (player1_id) REFERENCES Player(player_id),
-    FOREIGN KEY (player2_id) REFERENCES Player(player_id)
+    FOREIGN KEY (player2_id) REFERENCES Player(player_id),
+    FOREIGN KEY (tournament_id) REFERENCES Tournament(tournament_id)
 );
 
 -- Tournament Table
@@ -49,7 +47,16 @@ CREATE TABLE Tournament (
     tournament_date DATE NOT NULL
 );
 
--- TrainerCard Table
+-- Tournament_Player Table for Many-to-Many relationship between Tournament and Player
+CREATE TABLE Tournament_Player (
+    tournament_id INT,
+    player_id INT,
+    PRIMARY KEY (tournament_id, player_id),
+    FOREIGN KEY (tournament_id) REFERENCES Tournament(tournament_id),
+    FOREIGN KEY (player_id) REFERENCES Player(player_id)
+);
+
+-- Trainer_Card Table
 CREATE TABLE Trainer_Card (
     card_id INT,
     card_effect TEXT NOT NULL,
