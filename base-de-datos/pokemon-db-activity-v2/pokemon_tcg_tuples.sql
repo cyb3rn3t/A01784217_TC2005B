@@ -102,7 +102,7 @@ INSERT INTO Tournament (tournament_name, tournament_date) VALUES
 
 -- Inserting TrainerCards
 -- Only inserting a few of these since not all tuples in my Card table are Trainer type cards
-INSERT INTO TrainerCard (card_id, card_effect, usage_limit) VALUES
+INSERT INTO Trainer_Card (card_id, card_effect, usage_limit) VALUES
 (4, 'Shuffle your hand into your deck. Then, draw 7 cards.', 1),
 (8, 'Search your deck for up to 2 Basic Pokémon and put them onto your Bench. Then, shuffle your deck.', 1);
 
@@ -123,9 +123,6 @@ INSERT INTO Evolution (base_card_id, evolved_card_id, evolution_stage) VALUES
 (5, 9, 'Stage 1'),
 (7, 11, 'Stage 1'),
 (8, 14, 'Stage 1');
-
-SELECT deck_id FROM Deck;
-
 
 -- Inserting Deck_Cards
 INSERT INTO Deck_Cards (deck_id, card_id) VALUES
